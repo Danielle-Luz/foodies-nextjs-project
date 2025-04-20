@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from  "./styles.module.css";
+import ImageSlider from "@/components/image-slider/Image-slider";
 
 export default function Home() {
   return (
     <main className="horizontal-spacing">
       <section className={styles.hero}>
+        <ImageSlider />
         <article className={styles["hero-content"]}>
           <div>
             <h2 className={styles["hero-title"]}>Nextlevel food for nextlevel foodies</h2>
