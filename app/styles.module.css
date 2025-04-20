@@ -7,6 +7,7 @@
 .hero-content {
   display: flex;
   flex-direction: column;
+  max-width: 23rem;
   gap: 2rem;
 }
 
@@ -23,5 +24,33 @@
 
 .hero-text {
   color: var(--color-white-1);
-  font-size: 1.2rem;
+}
+
+.hero-text, .hero-links {
+  font-size: 1.1rem;
+}
+
+.hero-links {
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.hero-links-normal {
+  color: var(--color-primary-1);
+  font-weight: inherit;
+}
+
+.hero-links-normal:active,
+.hero-links-normal:hover {
+  color: var(--color-primary-2);
+}
+
+.hero-links-highlight {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+  color: var(--color-white-1);
+  font-weight: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
