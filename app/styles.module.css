@@ -50,11 +50,20 @@
 }
 
 .hero-links-highlight {
-  background: linear-gradient(90deg, #fd4715, #f9b241);
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
   color: var(--color-white-1);
   font-weight: inherit;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+}
+
+.hero-links-highlight:active,
+.hero-links-highlight:hover {
+ background: linear-gradient(90deg, #fd4715, #f9b241);
+}
+
+.hero-links-highlight, .hero-links-normal {
+  transition: 0.2s;
 }
 
 @media (max-width: 450px) {
