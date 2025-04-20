@@ -22,3 +22,17 @@
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
+
+.navbar {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  gap: 3rem;
+}
+
+.navbarLink {
+  color: var(--color-white-1);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
