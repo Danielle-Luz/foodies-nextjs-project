@@ -1,0 +1,27 @@
+.hero {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-title {
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+  background-clip: text;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+  color: var(--color-white-1);
+  font-size: 1.2rem;
+}
