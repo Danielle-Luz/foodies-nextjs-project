@@ -7,3 +7,9 @@
   object-fit: cover;
   width: 100%;
 }
+
+@media (max-width: 890px) {
+  .image-slider img {
+    height: 18rem;
+  }
+}

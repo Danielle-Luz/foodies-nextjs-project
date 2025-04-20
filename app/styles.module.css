@@ -66,6 +66,18 @@
   transition: 0.2s;
 }
 
+@media (max-width: 890px) {
+  .hero {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 450px) {
   .hero {
     text-align: center;
