@@ -1,7 +1,9 @@
 'use client'
+
 import Image from "next/image";
 import { images } from "./data";
 import { useState } from "react";
+import styles from "./styles.module.css";
 
 export default function ImageSlider() {
   const [visibleImage, setVisibleImage] = useState({index: 0, data: images[0]});
@@ -17,6 +19,6 @@ export default function ImageSlider() {
   }, 5000);
 
   return (
-    <Image src={visibleImage.data.image} alt={visibleImage.data.alt} />
+    <Image className={styles["image-slider"]} src={visibleImage.data.image} alt={visibleImage.data.alt} />
   );
 }
