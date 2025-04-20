@@ -4,7 +4,7 @@ import styles from  "./styles.module.css";
 
 export default function Home() {
   return (
-    <>
+    <main className="horizontal-spacing">
       <section className={styles.hero}>
         <article className={styles["hero-content"]}>
           <div>
@@ -17,9 +17,9 @@ export default function Home() {
           </div>
         </article>
       </section>
-      <main>
+      <section>
         <h1></h1>
-      </main>
-    </>
+      </section>
+    </main>
   );
 }

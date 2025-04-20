@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} horizontal-spacing`}>
       <Link className={styles.logo} href="./">
         <Image src={logo} alt="Ilustration of different types of meals over a plate" priority />
         <h1>NextLevel Food</h1>

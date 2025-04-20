@@ -3,7 +3,6 @@
   display: flex;
   gap: 4rem;
   justify-content: space-between;
-  padding: 2rem 6rem;
 }
 
 .logo {
@@ -49,12 +48,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 0 rgba(248, 190, 42, 0.8);
-}
-
-@media (max-width: 1060px) {
-  .header {
-    padding: 2rem 2rem;
-  }
 }
 
 @media (max-width: 720px) {
