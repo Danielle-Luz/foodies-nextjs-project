@@ -1,5 +1,8 @@
+'use client'
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import styles from "./styles.module.css";
 
 export default function NavbarLink({href, children}) {
   const currentPath = usePathname();
