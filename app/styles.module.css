@@ -1,0 +1,86 @@
+.hero {
+  align-items: center;
+  display: flex;
+  gap: 8rem;
+  justify-content: flex-start;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 23rem;
+  gap: 2rem;
+}
+
+.hero-title {
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+  background-clip: text;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+  color: var(--color-white-1);
+}
+
+.hero-text, .hero-links {
+  font-size: 1.1rem;
+}
+
+.hero-links {
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  gap: 1rem;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.hero-links-normal {
+  color: var(--color-primary-1);
+  font-weight: inherit;
+}
+
+.hero-links-normal:active,
+.hero-links-normal:hover {
+  color: var(--color-primary-2);
+}
+
+.hero-links-highlight {
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: var(--color-white-1);
+  font-weight: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.hero-links-highlight:active,
+.hero-links-highlight:hover {
+ background: linear-gradient(90deg, #fd4715, #f9b241);
+}
+
+.hero-links-highlight, .hero-links-normal {
+  transition: 0.2s;
+}
+
+@media (max-width: 890px) {
+  .hero {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero {
+    text-align: center;
+  }
+}

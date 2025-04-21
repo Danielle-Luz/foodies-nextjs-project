@@ -2,6 +2,8 @@
 
 :root {
   --color-white-1: #ddd6cb;
+  --color-primary-1: #ff9b05;
+  --color-primary-2: #f9b241;
 }
 
 * {
@@ -15,6 +17,11 @@ html {
 body {
   margin: 0;
   background: radial-gradient(#282c34, #282c34);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .header-background {
@@ -58,4 +65,14 @@ svg {
   font-size: 1.5rem;
   font-weight: 500;
   color: #ddd8d8;
+}
+
+.horizontal-spacing {
+  padding: 2rem 6rem;
+}
+
+@media (max-width: 1060px) {
+  .horizontal-spacing {
+    padding: 2rem 2rem;
+  }
 }
