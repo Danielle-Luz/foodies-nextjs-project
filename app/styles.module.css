@@ -1,7 +1,7 @@
 .hero {
   align-items: center;
   display: flex;
-  gap: 8rem;
+  gap: 5rem;
   justify-content: flex-start;
 }
 
@@ -73,14 +73,14 @@
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 700px) {
   .hero {
-    flex-direction: column;
+    text-align: center;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 580px) {
   .hero {
-    text-align: center;
+    flex-direction: column;
   }
 }
