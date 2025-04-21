@@ -1,0 +1,69 @@
+.meal-list {
+  align-content: center;
+  color: var(--color-white-1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  width: fit-content;
+}
+
+.meal {
+  display: flex;
+  flex-direction: column;
+  max-height: 25rem;
+  max-width: 20rem;
+}
+
+.meal-image {
+  border-radius: 0.5rem 0.5rem 0 0;
+  flex-grow: 1;
+  object-fit: cover;
+  position: relative !important;
+}
+
+.meal-details {
+  background: linear-gradient(90deg, #2c1e19, #25200f);
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.2rem;
+  padding: 0.8rem;
+}
+
+.meal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.meal-title {
+  font-size: 1.2rem;
+}
+
+.meal-creation {
+  font-size: 0.7rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.meal-summary, 
+.meal-link {
+  font-size: 1rem;
+}
+
+.meal-link {
+  align-self: flex-end;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.5s ease-out;
+}
+
+.meal-link:active,
+.meal-link:hover {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+  box-shadow: 0 0 12px rgba(242, 100, 18, 0.8);
+}
