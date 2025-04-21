@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from  "./styles.module.css";
-import ImageSlider from "@/components/image-slider/Image-slider";
+import ImageSlider from "@/components/image-slider/image-slider";
 
 export default function Home() {
   return (
-    <main className="horizontal-spacing">
+    <main className={`${styles["main-content"]} horizontal-spacing`}>
       <section className={styles.hero}>
         <ImageSlider />
         <article className={styles["hero-content"]}>
@@ -20,7 +20,31 @@ export default function Home() {
         </article>
       </section>
       <section>
-        <h1></h1>
+        <article className={styles.purpose}>
+          <h2>How it works</h2>
+          <p>
+            NextLevel Food is a platform for foodies to share their favorite
+            recipes with the world. It&apos;s a place to discover new dishes, and to
+            connect with other food lovers.
+          </p>
+          <p>
+            NextLevel Food is a place to discover new dishes, and to connect
+            with other food lovers.
+          </p>
+        </article>
+
+        <article className={styles.purpose}>
+          <h2>Why NextLevel Food?</h2>
+          <p>
+            NextLevel Food is a platform for foodies to share their favorite
+            recipes with the world. It&apos;s a place to discover new dishes, and to
+            connect with other food lovers.
+          </p>
+          <p>
+            NextLevel Food is a place to discover new dishes, and to connect
+            with other food lovers.
+          </p>
+        </article>
       </section>
     </main>
   );
