@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import { perks } from './perks-data';
 
 export default function Community() {
+  console.log(perks);
   return (
     <main className={`horizontal-spacing ${styles["content"]}`}>
       <article className={styles["header"]}>
@@ -13,11 +14,14 @@ export default function Community() {
         <h2>Community Perks</h2>
         <ul className={styles["perks-list"]}>
           {
-            perks.map(perk => {
-              <li className={styles["perks-list-item"]}>
-                <p className={styles["perks-content"]}>{perk.content}</p>
-                <Image className={styles["perks-image"]} src={perk.src} alt={perk.alt} />
-              </li>
+            perks.map(
+              (perk, key) => {
+              return (
+                <li key={key} className={styles["perks-list-item"]}>
+                  <p className={styles["perks-content"]}>{perk.content}</p>
+                  <Image className={styles["perks-image"]} src={perk.src} alt={perk.alt} />
+                </li>
+              )
             })
           }
         </ul>
