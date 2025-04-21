@@ -34,25 +34,6 @@
   padding: 0;
 }
 
-.navbarLink {
-  color: var(--color-white-1);
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.navbarLink:active, 
-.navbarLink:hover {
-  background: linear-gradient(90deg, #ff8a05, #f9b331);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.selected {
-  text-shadow: 0 0 0.5rem rgba(248, 190, 42, 0.8);
-}
-
 @media (max-width: 720px) {
   .header {
     flex-direction: column;

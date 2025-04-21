@@ -12,10 +12,8 @@ export default function Header() {
       </Link>
       <ul className={styles.navbar}>
         <li>
-          <Link className={styles.navbarLink} href="/meals">Browse meals</Link>
         </li>
         <li>
-          <Link className={styles.navbarLink} href="/community">Foodies Community</Link>
         </li>
       </ul>
     </header>
