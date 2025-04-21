@@ -1,0 +1,38 @@
+.header {
+  align-items: center;
+  color: var(--color-white-1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-block: 5rem;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 2.5rem;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #f9572a, #ff8a05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-link {
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.header-text,
+.header-link {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 440px) {  
+  .header-title {
+    font-size: 1.8rem;
+  }
+}
