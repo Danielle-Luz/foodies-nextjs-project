@@ -24,3 +24,8 @@
   font-weight: bold;
   padding: 0.5rem 1rem;
 }
+
+.header-text,
+.header-link {
+  font-size: 1.2rem;
+}
