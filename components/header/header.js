@@ -2,6 +2,7 @@ import logo from "@/assets/logo.png";
 import Link from "next/link";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import NavbarLink from "../navbar-link/navbar-link";
 
 export default function Header() {
   return (
@@ -12,10 +13,10 @@ export default function Header() {
       </Link>
       <ul className={styles.navbar}>
         <li>
-          <Link className={styles.navbarLink} href="/meals">Browse meals</Link>
+          <NavbarLink href="/meals">Browse meals</NavbarLink>
         </li>
         <li>
-          <Link className={styles.navbarLink} href="/community">Foodies Community</Link>
+          <NavbarLink href="/community">Foodies Community</NavbarLink>
         </li>
       </ul>
     </header>
