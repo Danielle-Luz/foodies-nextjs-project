@@ -18,8 +18,8 @@ export default function Community() {
               (perk, key) => {
               return (
                 <li key={key} className={styles["perks-list-item"]}>
-                  <p className={styles["perks-content"]}>{perk.content}</p>
                   <Image className={styles["perks-image"]} src={perk.src} alt={perk.alt} />
+                  <p className={styles["perks-content"]}>{perk.content}</p>
                 </li>
               )
             })

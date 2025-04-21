@@ -29,13 +29,27 @@
   -webkit-text-fill-color: transparent;
 }
 
+.perks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .perks-list-item {
   align-items: center;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
   justify-content: center;
 }
 
+.perks-image {
+  width: 7rem;
+  height: 7rem;
+}
+
 .perks-content {
+  display: flex;
+  flex-direction: column;
   font-weight: bold;
+  gap: 4rem;
 }
