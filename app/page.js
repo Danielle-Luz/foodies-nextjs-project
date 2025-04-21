@@ -19,8 +19,8 @@ export default function Home() {
           </div>
         </article>
       </section>
-      <section>
-        <article className={styles.purpose}>
+      <section className={styles.purpose}>
+        <article>
           <h2>How it works</h2>
           <p>
             NextLevel Food is a platform for foodies to share their favorite
@@ -33,7 +33,7 @@ export default function Home() {
           </p>
         </article>
 
-        <article className={styles.purpose}>
+        <article>
           <h2>Why NextLevel Food?</h2>
           <p>
             NextLevel Food is a platform for foodies to share their favorite
