@@ -37,6 +37,7 @@
   font-weight: bold;
   gap: 1rem;
   justify-content: space-between;
+  text-align: center;
 }
 
 .hero-links-normal {
