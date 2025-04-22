@@ -3,7 +3,7 @@ export default async function SelectedMeal(props) {
 
   return (
     <main>
-      <h1>{params.id}</h1>
+      <h1>{params.slug}</h1>
     </main>
   );
 }
