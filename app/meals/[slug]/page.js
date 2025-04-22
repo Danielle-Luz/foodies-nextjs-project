@@ -5,11 +5,11 @@ import styles from "./styles.module.css";
 export default async function SelectedMeal(props) {
   const params = await props.params;
   const meal = getMeal(params.slug);
-  const instructionsWithLineBreaks = meal.instructions.replace("\n", "<br/>")
+  const instructionsWithLineBreaks = meal.instructions.replace(/\n/g, "<br/>")
 
   return (
     <main className={styles["meal"]}>
-      <article>
+      <article className={styles["meal-data"]}>
         <Image className={styles["meal-image"]} src={meal.image} alt={meal.title} fill />
         <article className={styles["meal-details"]}>
           <h2 className={styles["meal-title"]}>{meal.title}</h2>
