@@ -8,7 +8,7 @@ export default async function SelectedMeal(props) {
   const instructionsWithLineBreaks = meal.instructions.replace(/\n/g, "<br/>")
 
   return (
-    <main className={styles["meal"]}>
+    <main className={`horizontal-spacing ${styles["meal"]}`}>
       <article className={styles["meal-data"]}>
         <Image className={styles["meal-image"]} src={meal.image} alt={meal.title} fill />
         <article className={styles["meal-details"]}>
