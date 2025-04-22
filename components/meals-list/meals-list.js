@@ -17,7 +17,7 @@ export default function MealsList({ meals }) {
                   <p className={styles["meal-creation"]}>By {meal.creator}</p>
                 </header>
                 <p className={styles["meal-summary"]}>{meal.summary}</p>
-                <Link className={styles["meal-link"]} href={`/meals/${meal.id}`}>View details</Link>
+                <Link className={styles["meal-link"]} href={`/meals/${meal.slug}`}>View details</Link>
               </article>
             </li>
           )
