@@ -20,6 +20,7 @@ export default function Share() {
         <Field label="Title" register={register} />
         <Field label="Short summary" register={register} />
         <Field label="Instructions" type="textarea" register={register} />
+        <input className={styles["submit-button"]} type="submit" value="Share meal" />
       </form>
     </main>
   );
