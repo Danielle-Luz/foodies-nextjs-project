@@ -1,0 +1,25 @@
+.image-picker-wrapper {
+  position: relative;
+}
+
+.image-picker {
+  visibility: hidden;
+}
+
+.pick-button {
+  background-color: var(--color-white-1);
+  color: var(--color-grey-1);
+  cursor: pointer;
+  left: 0;
+  padding: 0.5rem 2rem;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.pick-button:hover,
+.pick-button:active {
+  background-color: var(--color-grey-3);
+  border: 1px solid var(--color-grey-2);
+  color: var(--color-white-1);
+}

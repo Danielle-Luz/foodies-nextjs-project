@@ -3,6 +3,7 @@
 import Field from "@/components/field/field";
 import styles from "./styles.module.css";
 import { useForm } from "react-hook-form";
+import ImagePicker from "@/components/image-picker/image-picker";
 
 export default function Share() {
   const { register, handleSubmit } = useForm({});
@@ -20,6 +21,7 @@ export default function Share() {
         <Field label="Title" register={register} />
         <Field label="Short summary" register={register} />
         <Field label="Instructions" type="textarea" register={register} />
+        <ImagePicker label="Pick a image" register={register} />
         <input className={styles["submit-button"]} type="submit" value="Share meal" />
       </form>
     </main>
