@@ -23,3 +23,8 @@
  --webkit-background-clip: text;
  --webkit-text-fill-color: transparent;
 }
+
+.field-row {
+  display: flex;
+  gap: 1rem;
+}
