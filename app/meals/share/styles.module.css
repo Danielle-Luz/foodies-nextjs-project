@@ -1,3 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 50rem;
+}
+
 .form-wrapper {
   display: flex;
   flex-direction: column;
@@ -20,11 +27,18 @@
 .highlight {
   background: linear-gradient(90deg, #f9572a, #ff8a05);
   background-clip: text;
- --webkit-background-clip: text;
- --webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .field-row {
   display: flex;
   gap: 1rem;
+}
+
+@media (max-width: 520px) {
+  .field-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 }

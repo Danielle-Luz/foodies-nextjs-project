@@ -16,6 +16,12 @@
   background-color: var(--color-grey-2);
   color: var(--color-white-1);
   height: 2rem;
+  padding-inline: 0.6rem;
+}
+
+textarea.field {
+  resize: none;
+  height: 10rem;
 }
 
 .field-wrapper,

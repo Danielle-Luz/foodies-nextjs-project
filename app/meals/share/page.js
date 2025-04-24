@@ -1,16 +1,18 @@
+'use client'
+
 import Field from "@/components/field/field";
 import styles from "./styles.module.css";
 import { useForm } from "react-hook-form";
 
 export default function Share() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm({});
   return (
     <main className={`horizontal-spacing ${styles["form-wrapper"]}`}>
       <article>
         <h1 className={styles["header-title"]}>Share your <span className={styles.highlight}>favorite meal</span></h1>
         <p className={styles["header-description"]}>Or any other meal you feel needs sharing!</p>
       </article>
-      <form>
+      <form className={styles.form}>
         <article className={styles["field-row"]}>
           <Field label="Your name" register={register} />
           <Field label="Your email" register={register} />
