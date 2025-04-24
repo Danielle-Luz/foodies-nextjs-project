@@ -1,0 +1,21 @@
+.field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.field-label {
+  text-transform: uppercase;
+}
+
+.field {
+  border: 1px solid var(--color-grey-3);
+  background-color: var(--color-grey-2);
+  color: var(--color-white-1);
+}
+
+.field-label,
+.field {
+  font-size: 1rem;
+  width: 100%;
+}
