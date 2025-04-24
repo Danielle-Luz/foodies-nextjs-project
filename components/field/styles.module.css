@@ -1,6 +1,7 @@
 .field-wrapper {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 0.5rem;
 }
 
@@ -17,6 +18,7 @@
   height: 2rem;
 }
 
+.field-wrapper,
 .field-label,
 .field {
   font-size: 1rem;
