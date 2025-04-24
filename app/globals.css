@@ -38,6 +38,11 @@ ul {
   margin: 0;
 }
 
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
 .header-background {
   position: absolute;
   width: 100%;
