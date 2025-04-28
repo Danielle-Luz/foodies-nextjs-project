@@ -1,9 +1,12 @@
+"use client";
+
 import { useRef, useState } from "react";
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 export default function ImagePicker({ label, register }) {
   const ref = useRef();
-  const [pickedImage, setPickedImage] = useState(); 
+  const [pickedImage, setPickedImage] = useState();
 
   function selectImagePicker() {
     const imagePicker = ref.current.querySelector("input");
@@ -11,19 +14,36 @@ export default function ImagePicker({ label, register }) {
   }
 
   function updatePickedImage(event) {
-    setPickedImage(event.targer.files[0])
+    const file = event.target.files[0];
+
+    const fileReader = new FileReader();
+
+    fileReader.onload = () => {
+      console.log(fileReader.result);
+      setPickedImage(fileReader.result);
+    };
+
+    fileReader.readAsDataURL(file);
   }
 
   return (
     <article className={styles["image-picker-wrapper"]}>
+      {pickedImage && (
+        <Image
+          className={styles["picked-image"]}
+          src={pickedImage}
+          alt="Image of the meal selected by the user"
+          fill
+        />
+      )}
       <fieldset className={styles["image-picker"]} ref={ref}>
         <label htmlFor={label}>{label}</label>
         <input
           id={label}
           type="file"
           accept="image/png, image/jpeg"
-          onChange={updatePickedImage}
           {...register("image")}
+          onChange={updatePickedImage}
         />
       </fieldset>
       <button
