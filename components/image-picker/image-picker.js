@@ -3,10 +3,15 @@ import styles from "./styles.module.css";
 
 export default function ImagePicker({ label, register }) {
   const ref = useRef();
+  const [pickedImage, setPickedImage] = useState(); 
 
   function selectImagePicker() {
     const imagePicker = ref.current.querySelector("input");
     imagePicker.click();
+  }
+
+  function updatePickedImage(event) {
+    setPickedImage(event.targer.files[0])
   }
 
   return (
@@ -17,6 +22,7 @@ export default function ImagePicker({ label, register }) {
           id={label}
           type="file"
           accept="image/png, image/jpeg"
+          onChange={updatePickedImage}
           {...register("image")}
         />
       </fieldset>
