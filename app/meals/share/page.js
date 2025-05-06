@@ -2,11 +2,9 @@
 
 import Field from "@/components/field/field";
 import styles from "./styles.module.css";
-import { useForm } from "react-hook-form";
 import ImagePicker from "@/components/image-picker/image-picker";
 
 export default function Share() {
-  const { register, handleSubmit, setFocus } = useForm({});
   return (
     <main className={`horizontal-spacing ${styles["form-wrapper"]}`}>
       <article>
