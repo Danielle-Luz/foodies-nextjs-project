@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 
-export default function ImagePicker({ label }) {
+export default function ImagePicker({ label, name }) {
   const ref = useRef();
   const [pickedImage, setPickedImage] = useState();
 
@@ -39,6 +39,7 @@ export default function ImagePicker({ label }) {
         <label htmlFor={label}>{label}</label>
         <input
           id={label}
+          name={name}
           type="file"
           accept="image/png, image/jpeg"
           onChange={updatePickedImage}

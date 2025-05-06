@@ -3,8 +3,10 @@
 import Field from "@/components/field/field";
 import styles from "./styles.module.css";
 import ImagePicker from "@/components/image-picker/image-picker";
+import { onSubmit } from "./handleForm";
 
 export default function Share() {
+
   return (
     <main className={`horizontal-spacing ${styles["form-wrapper"]}`}>
       <article>
@@ -15,15 +17,15 @@ export default function Share() {
           Or any other meal you feel needs sharing!
         </p>
       </article>
-      <form className={styles.form}>
+      <form className={styles.form} action={onSubmit}>
         <article className={styles["field-row"]}>
-          <Field label="Your name" />
-          <Field label="Your email" />
+          <Field label="Your name" name="name" />
+          <Field label="Your email" name="email" />
         </article>
-        <Field label="Title" />
-        <Field label="Short summary" />
-        <Field label="Instructions" type="textarea" />
-        <ImagePicker label="Pick a image" />
+        <Field label="Title" name="title" />
+        <Field label="Short summary" name="summary" />
+        <Field label="Instructions" name="instructions" type="textarea" />
+        <ImagePicker label="Pick a image" name="image" />
         <input
           className={styles["submit-button"]}
           type="submit"
