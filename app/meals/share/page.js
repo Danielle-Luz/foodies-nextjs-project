@@ -19,13 +19,13 @@ export default function Share() {
       </article>
       <form className={styles.form}>
         <article className={styles["field-row"]}>
-          <Field label="Your name" register={register} />
-          <Field label="Your email" register={register} />
+          <Field label="Your name" />
+          <Field label="Your email" />
         </article>
-        <Field label="Title" register={register} />
-        <Field label="Short summary" register={register} />
-        <Field label="Instructions" type="textarea" register={register} />
-        <ImagePicker label="Pick a image" register={register} />
+        <Field label="Title" />
+        <Field label="Short summary" />
+        <Field label="Instructions" type="textarea" />
+        <ImagePicker label="Pick a image" />
         <input
           className={styles["submit-button"]}
           type="submit"

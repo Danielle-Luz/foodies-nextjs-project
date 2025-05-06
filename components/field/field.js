@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-export default function Field({ label, register, type = "text" }) {
+export default function Field({ label, type = "text" }) {
   return (
     <fieldset className={styles["field-wrapper"]}>
       <label className={styles["field-label"]} htmlFor={label}>
@@ -13,7 +13,6 @@ export default function Field({ label, register, type = "text" }) {
           id={label}
           className={styles["field"]}
           type="text"
-          {...register(label)}
         />
       )}
     </fieldset>

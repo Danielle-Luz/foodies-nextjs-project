@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 
-export default function ImagePicker({ label, register }) {
+export default function ImagePicker({ label }) {
   const ref = useRef();
   const [pickedImage, setPickedImage] = useState();
 
@@ -19,7 +19,6 @@ export default function ImagePicker({ label, register }) {
     const fileReader = new FileReader();
 
     fileReader.onload = () => {
-      console.log(fileReader.result);
       setPickedImage(fileReader.result);
     };
 
@@ -42,7 +41,6 @@ export default function ImagePicker({ label, register }) {
           id={label}
           type="file"
           accept="image/png, image/jpeg"
-          {...register("image")}
           onChange={updatePickedImage}
         />
       </fieldset>
