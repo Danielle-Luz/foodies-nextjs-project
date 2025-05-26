@@ -17,8 +17,8 @@ export default function Share() {
       </article>
       <form className={styles.form} action={onSubmit}>
         <article className={styles["field-row"]}>
-          <Field label="Your name" name="name" />
-          <Field label="Your email" name="email" />
+          <Field label="Your name" name="creator" />
+          <Field label="Your email" name="creator_email" />
         </article>
         <Field label="Title" name="title" />
         <Field label="Short summary" name="summary" />

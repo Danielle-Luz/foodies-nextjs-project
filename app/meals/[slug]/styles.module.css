@@ -62,9 +62,10 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   color: var(--color-grey-1);
-  max-width: 50rem;
+  max-width: 47rem;
   padding: 1rem 2rem 2.5rem;
   vertical-align: middle;
+  width: 100%;
 }
 
 @media (max-width: 670px) {

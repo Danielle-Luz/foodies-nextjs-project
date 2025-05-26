@@ -11,7 +11,7 @@ export async function onSubmit(formData) {
     if(isNotActionId) {
       newMeal[fieldName] = formData.get(fieldName);
     }
-
-    createMeal(newMeal);
   });
+  
+  createMeal(newMeal);
 }

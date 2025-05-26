@@ -1,3 +1,5 @@
+import xss from "xss";
+
 const fs = require("fs");
 const sql = require("better-sqlite3");
 const database = sql("meals.db");
@@ -16,10 +18,12 @@ export async function createMeal(newMeal) {
 
   const titleWithoutSpaces = newMeal.title.toLowerCase().replace(whiteSpaceRegex, "-");
   const titleOnlyWithLetters = titleWithoutSpaces.replace(nonLetterCharactersRegex, "");
+
+  newMeal.instructions = xss(newMeal.instructions);
   newMeal.slug = titleOnlyWithLetters;
 
-  const imageFileName =` ${titleOnlyWithLetters}.${imageFormat}`;
   const imageFormat = newMeal.image.name.split(".").pop();
+  const imageFileName =` ${titleOnlyWithLetters}.${imageFormat}`;
   const imageStream = fs.createWriteStream(`public/images/${imageFileName}`);
   const bufferedImage = await newMeal.image.arrayBuffer();
 
@@ -30,12 +34,12 @@ export async function createMeal(newMeal) {
     }
   );
 
-  newMeal.image = `images/${imageFileName}`;
+  newMeal.image = `/images/${imageFileName}`;
 
   const insertStatement = database.prepare(`
     INSERT INTO meals  
     (slug, title, image, summary, instructions, creator, creator_email)
-    VALUES
+    VALUES(
       @slug,
       @title,
       @image,
@@ -43,6 +47,7 @@ export async function createMeal(newMeal) {
       @instructions,
       @creator,
       @creator_email
+    )
   `);
 
   insertStatement.run(newMeal);
