@@ -1,5 +1,3 @@
-"use client";
-
 import Field from "@/components/field/field";
 import styles from "./styles.module.css";
 import ImagePicker from "@/components/image-picker/image-picker";
