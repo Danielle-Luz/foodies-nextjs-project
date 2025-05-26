@@ -1,5 +1,7 @@
 'use server';
 
+import { createMeal } from "@/api/meals";
+
 export async function onSubmit(formData) {
   let newMeal = {};
 
@@ -9,5 +11,7 @@ export async function onSubmit(formData) {
     if(isNotActionId) {
       newMeal[fieldName] = formData.get(fieldName);
     }
+
+    createMeal(newMeal);
   });
 }
