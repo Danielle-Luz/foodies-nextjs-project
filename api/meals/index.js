@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import xss from "xss";
 
 const fs = require("fs");
@@ -51,4 +52,6 @@ export async function createMeal(newMeal) {
   `);
 
   insertStatement.run(newMeal);
+
+  redirect("/meals");
 }
