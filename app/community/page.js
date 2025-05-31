@@ -3,7 +3,6 @@ import styles from "./styles.module.css";
 import { perks } from './perks-data';
 
 export default function Community() {
-  console.log(perks);
   return (
     <main className={`horizontal-spacing ${styles["content"]}`}>
       <article className={styles["header"]}>
