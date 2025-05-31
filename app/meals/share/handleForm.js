@@ -30,19 +30,19 @@ export async function onSubmit(previousValue, formData) {
 
   if(hasInvalidTextValues || hasInvalidImage) {
      return {
-      status: 400,
+      status: "error",
       message: "There are empty fields in the form, make sure to fill in all the fields."
      }
   } else {
     try {
       createMeal(newMeal);
       return {
-        status: 201,
+        status: "success",
         message: "Meal shared with success!"
       }
     } catch (error) {
       return {
-        status: 400,
+        status: "error",
         message: error.message
       }
     }

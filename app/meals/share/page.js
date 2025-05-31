@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Field from "@/components/field/field";
 import styles from "./styles.module.css";
@@ -7,13 +7,30 @@ import { onSubmit } from "./handleForm";
 import FormButton from "@/components/form-button";
 import { useFormState } from "react-dom";
 import Popup from "@/components/popup";
+import { useEffect, useState } from "react";
 
 export default function Share() {
-  const [state, formAction] = useFormState(onSubmit, {});
+  const [state, formAction] = useFormState(onSubmit, {
+    message: null,
+    status: null,
+  });
+  
+  const [popupVisibility, setPopupVisibility] = useState(false);
+
+  useEffect(() => {
+    setPopupVisibility(state.status != null);
+  }, [state]);
 
   return (
     <>
-      <Popup title="title" text="text" />
+      {popupVisibility && (
+        <Popup
+          title={state.status}
+          text={state.message}
+          status={state.status}
+          setPopupVisibility={setPopupVisibility}
+        />
+      )}
       <main className={`horizontal-spacing ${styles["form-wrapper"]}`}>
         <article>
           <h1 className={styles["header-title"]}>

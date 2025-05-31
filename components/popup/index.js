@@ -1,14 +1,21 @@
 import styles from "./styles.module.css";
 
-export default function Popup({ title, text, status }) {
+export default function Popup({ title, text, status, setPopupVisibility }) {
+  const capitalizedTitle = title?.split("").shift().toUpperCase() + title?.slice(1);
+
+  function closePopup() {
+    setPopupVisibility(false);
+  }
+
   const imagesByStatus = {
     error: "https://img.icons8.com/metro/200/FA5252/error.png",
     success: "https://img.icons8.com/material-rounded/200/169B74/ok--v1.png",
   };
+
   return (
     <article className={styles["popup-background"]}>
       <div className={styles["popup-wrapper"]}>
-        <button className={styles["close-button"]}>
+        <button className={styles["close-button"]} onClick={closePopup}>
           <img
             src="https://img.icons8.com/material-rounded/100/ffffff/delete-sign.png"
             alt="close popup icon"
@@ -20,7 +27,7 @@ export default function Popup({ title, text, status }) {
             src={imagesByStatus[status]}
             alt="icon that indicates the status of the form submission"
           />
-          <h2>{title}</h2>
+          <h2>{capitalizedTitle}</h2>
           <p className={styles["popup-text"]}>{text}</p>
         </article>
       </div>

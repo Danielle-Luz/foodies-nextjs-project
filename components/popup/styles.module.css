@@ -6,6 +6,7 @@
   height: 100vh;
   padding: 20px;
   position: fixed;
+  text-align: center;
   top: 0;
   width: 100%;
   z-index: 2;
@@ -44,7 +45,7 @@
   flex-direction: column;
   height: 300px;
   justify-content: center;
-  padding: 20px;
+  padding: 40px;
   width: 100%;
 }
 
