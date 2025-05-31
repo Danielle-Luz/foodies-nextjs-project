@@ -48,6 +48,11 @@
   width: 100%;
 }
 
+.popup-status-image {
+  max-width: 70px;
+  margin-bottom: 20px;
+}
+
 .popup-text {
   font-size: 1rem;
 }
