@@ -20,6 +20,22 @@
   width: 100%;
 }
 
+.close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 45px;
+}
+
+.close-button img {
+  transition: 0.2s;
+  width: 100%;
+}
+
+.close-button img:hover {
+  opacity: 50%;
+}
+
 .popup {
   align-items: center;
   background-color: white;
