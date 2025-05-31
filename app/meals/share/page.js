@@ -2,6 +2,7 @@ import Field from "@/components/field/field";
 import styles from "./styles.module.css";
 import ImagePicker from "@/components/image-picker/image-picker";
 import { onSubmit } from "./handleForm";
+import FormButton from "@/components/form-button";
 
 export default function Share() {
 
@@ -24,11 +25,7 @@ export default function Share() {
         <Field label="Short summary" name="summary" />
         <Field label="Instructions" name="instructions" type="textarea" />
         <ImagePicker label="Pick a image" name="image" />
-        <input
-          className={styles["submit-button"]}
-          type="submit"
-          value="Share meal"
-        />
+        <FormButton buttonLabel="Share meal" />
       </form>
     </main>
   );
