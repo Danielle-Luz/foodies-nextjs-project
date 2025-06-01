@@ -13,9 +13,10 @@ export default function MealsList({ meals }) {
                 className={styles["meal-image"]}
                 src={meal.image}
                 alt={meal.title}
-                placeholder="blur"
                 blurDataURL={placeholderImage.src}
-                fill
+                height={200}
+                width={200}
+                placeholder="blur"
               />
             <article className={styles["meal-details"]}>
               <header className={styles["meal-header"]}>
