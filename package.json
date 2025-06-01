@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "better-sqlite3": "^11.9.1",
+    "imgur": "^2.4.3",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",

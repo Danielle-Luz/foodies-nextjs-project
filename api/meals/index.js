@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { ImgurClient } from 'imgur';
 import xss from "xss";
 
 const fs = require("fs");
@@ -13,6 +13,34 @@ export function getMeal(slug) {
   return database.prepare("SELECT * FROM meals WHERE slug = ?").get(slug);
 }
 
+export async function getImageAsBase64(image) {
+  const imageBytes = await image.bytes();
+  let binary = "";
+
+  imageBytes.forEach((byte) => {
+    binary += String.fromCharCode(byte)
+  });
+
+  return btoa(binary);
+}
+
+export async function getUploadedImageLink(image) {
+  try {
+    const imgurClient = new ImgurClient({ clientId: process.env.IMGUR_CLIENT_ID });
+
+    const imageAsBase64 = await getImageAsBase64(image);
+
+    const uploadedImage = await imgurClient.upload({
+      image: imageAsBase64,
+      type: "base64"
+    });
+
+    return uploadedImage.data.link;
+  } catch {
+    new Error("An error happened while saving the image");
+  }
+}
+
 export async function createMeal(newMeal) {
   const whiteSpaceRegex = /\s/g;
   const nonLetterCharactersRegex = /[^a-zA-Z]/g;
@@ -23,19 +51,8 @@ export async function createMeal(newMeal) {
   newMeal.instructions = xss(newMeal.instructions);
   newMeal.slug = titleOnlyWithLetters;
 
-  const imageFormat = newMeal.image.name.split(".").pop();
-  const imageFileName =` ${titleOnlyWithLetters}.${imageFormat}`;
-  const imageStream = fs.createWriteStream(`public/images/${imageFileName}`);
-  const bufferedImage = await newMeal.image.arrayBuffer();
-
-  imageStream.write(Buffer.from(bufferedImage), (error) =>  {
-      if(error) {
-        new Error("An error happened while saving the image");
-      }
-    }
-  );
-
-  newMeal.image = `/images/${imageFileName}`;
+  const imageLink = await getUploadedImageLink(newMeal.image);
+  newMeal.image = imageLink;
 
   const insertStatement = database.prepare(`
     INSERT INTO meals  
@@ -52,6 +69,4 @@ export async function createMeal(newMeal) {
   `);
 
   insertStatement.run(newMeal);
-
-  redirect("/meals");
 }
