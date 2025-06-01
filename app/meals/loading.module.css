@@ -1,0 +1,27 @@
+.loading-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.loading {
+  border-radius: 100%;
+  border: 1rem solid white;
+  border-top: 1rem solid var(--color-primary-1);
+  height: 10rem;
+  width: 10rem;
+
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

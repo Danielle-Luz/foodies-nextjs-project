@@ -1,0 +1,40 @@
+.image-picker-wrapper {
+  align-items: flex-start;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.image-picker {
+  visibility: hidden;
+  position: absolute;
+}
+
+.picked-image {
+  border: 1px solid var(--color-white-1);
+  max-width: 20rem;
+  max-height: 20rem;
+  position: relative !important;
+}
+
+.pick-button {
+  background-color: var(--color-white-1);
+  color: var(--color-grey-1);
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+
+.pick-button:hover,
+.pick-button:active {
+  background-color: var(--color-grey-3);
+  border: 1px solid var(--color-grey-2);
+  color: var(--color-white-1);
+}
+
+@media (max-with: 430px) {
+  .image-picker-wrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+}
