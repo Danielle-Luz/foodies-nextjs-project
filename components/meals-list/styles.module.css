@@ -13,6 +13,7 @@
   flex-direction: column;
   max-height: 25rem;
   max-width: 20rem;
+  width: 100%;
 }
 
 .meal-image {
@@ -20,6 +21,7 @@
   flex-grow: 1;
   object-fit: cover;
   position: relative !important;
+  width: 100%;
 }
 
 .meal-details {

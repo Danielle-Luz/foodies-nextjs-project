@@ -36,6 +36,9 @@ export async function onSubmit(previousValue, formData) {
   } else {
     try {
       createMeal(newMeal);
+
+      revalidatePath("/meals");
+
       return {
         status: "success",
         message: "Meal shared with success!"
